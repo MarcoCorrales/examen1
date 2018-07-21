@@ -1,0 +1,113 @@
+/* Estilos generales---------------------------------------------------------------------- */
+table{
+  width: 100%;
+}
+th { 
+  background: #fbb803; 
+  color: #000; 
+  font-weight: bold; 
+}
+td, th, tr { 
+  padding: 6px; 
+  border: none;
+  text-align: center; 
+  white-space: pre-line;
+  vertical-align: middle;
+
+  width: auto;
+  
+}
+
+/* Estilos clases ---------------------------------------------------------------------------------------- */
+
+.wrapper-header{
+  display: flow-root;
+}
+
+.titulo-lista  {
+  color: #fff;
+  width: 100%;  
+  margin: auto;
+  margin-bottom: 1%;
+  margin-top: 1%;
+  font-size: 2.5em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.btn-list {
+  top: 18%;
+	border: none;
+	cursor: pointer;
+	width: 90%;
+  padding: 5%;
+  /* margin: 0.5%; */
+	border-radius: 2%;
+  font-size: 15px;
+  color: #ffffff;
+  background-color: rgba(48, 57, 82,1.0);
+  border-color: #ffffff;
+}
+
+.esconder{
+  display: none;
+}
+
+.filtro {
+  position: relative;
+  /*float: left; */
+  right: 135px;
+  width: 59%;
+}
+
+/* Estilos pseudo clases ------------------------------------------------------------------------------------ */
+
+tr:nth-of-type(odd) { 
+  background: rgba(236, 240, 241,0.5); 
+  color: black;
+}
+tr:nth-of-type(even){
+	color: #ecf0f1;
+}
+
+tr:hover{
+  background-color: rgba(251,184,3,1.5);
+}
+
+.btn-list:hover {
+	background-color: rgba(89, 98, 117,1.0);
+}
+
+
+input:focus:invalid,
+textarea:focus:invalid {
+    /* Cuando en el buscador el campo es invalido*/
+    background: #fff url(../img/invalid3.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #ed2024;
+    border-color: #ed2024;
+}
+input:required:valid,
+textarea:required:valid {
+    /* when a field is considered valid by the browser */
+    background: #fff url(../img/valid3.png) no-repeat 98% center;
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+}
+
+/* Estilos pseudo elementos ------------------------------------------------------------------- */
+
+#tblEstud, #tblProyectos, #tblClientes, #tblProfesores{
+  position: absolute;
+  top: 25%;
+  margin-left: 5%;
+  width: 90%;
+}
+
+
+#tblEstudiantesAsignados, #tblEstudiantes{
+  margin-top: 5%;
+  top: 25%;
+  margin-left: 5%;
+  width: 90%;
+}
+

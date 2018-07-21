@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<!--  MODIFICADO 14/7/2018 AGREGAR VERSION. -->
+
+<html lang="es">
+    <head>
+      <meta charset="utf-8">       
+        <title>Registrar Profesor</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous"> 
+        <link rel="stylesheet" href="../../css/generales/reset.css">
+        <link rel="stylesheet" href="../../css/generales/generales.css">
+        <link rel="stylesheet" href="../../css/formularios/formularios_general.css">
+    </head>
+  <body>
+    <div class="wrapper"> 
+
+    
+
+            <form id="FormularioProfesor">
+
+            <!-- * * * * * * * * * * * en este div es en el que tienen que trabajar * * * * * * * * * * * * * * * -->
+            <!-- <div><h1>Registro Profesor</h1></div> -->
+
+            <!-- * Revisar CSS * -->
+                
+            <div class="field">
+                    <input type="text" id="txtNombreProfesor" placeholder="Nombre"></input>
+                    <label for="txtNombreProfesor">Nombre</label>
+                  </div>
+
+            <div class="field">
+                    <input type="text" id="txtApellidoProfesor" placeholder="Apellido"></input>
+                    <label for="txtApellidoProfesor">Apellido</label>
+                </div>  
+
+            <div class="field">
+                    <input type="text" id="txtCedulaProfesor" placeholder="Cedúla"></input>
+                    <label for="txtCedulaProfesor">Cedúla</label>
+                </div> 
+
+             <div class="field">
+                    <input type="number" id="txtTelefonoProfesor" placeholder="Teléfono"></input>
+                    <label for="txtTelefonoProfesor">Teléfono</label>
+              </div>  
+
+              <div class="field">
+                    <input type="text" id="txtCorreoProfesor" placeholder="Correo Electronico"></input>
+                    <label for="txtCorreoProfesor">Correo Electronico</label>
+              </div>  
+
+              <div class="field">
+                    <input type="text" id="txtProvinciaProfesor" placeholder="Provincia"></input>
+                    <label for="txtProvinciaProfesor">Provincia</label>
+              </div>  
+
+              <div class="field">
+                    <input type="text" id="txtCantonProfesor" placeholder="Canton"></input>
+                    <label for="txtCantonProfesor">Canton</label>
+              </div>  
+
+              <div class="field">
+                    <input type="text" id="txtDistritoProfesor" placeholder="Distrito"></input>
+                    <label for="txtDistritoProfesor">Distrito</label>
+              </div>  
+
+              <div class="field">
+                    <input type="text" id="txtDireccionExactaProfesor" placeholder="Dirección Exacta"></input>
+                    <label for="txtDireccionExactaProfesor">Dirección Exacta</label>
+              </div>  
+
+              <div class="field">
+                    <input type="text" id="txtGAcademico" placeholder="Grado Académico"></input>
+                    <label for="txtGAcademico">Grado Académico</label>
+              </div>  
+
+              <div class="field">
+                    <input type="number" id="txtAexperiencia" placeholder="Años de Experiencia"></input>
+                    <label for="txtAexperiencia">Años de Experiencia</label>
+              </div>   
+
+
+              <div class="field">
+                    <input type="text" id="txtCImpartidos" placeholder="Cursos Impartidos"></input>
+                    <label for="txtCImpartidos">Cursos Impartidos</label>
+              </div>  
+
+              
+                
+                <select id="txtTipoProfesor"  >
+                    <option value="ambos" >Ambos</option>
+                    <option value="tecnico">Técnico</option>
+                    <option value="lider">Líder</option>
+                </select>
+
+                <button type="button" id="btnRegistrarProfesor" class="btn-registrar">Registrar</button>
+            </form>
+
+            
+    
+    </div> 
+    
+   <!-- * Recordar Que tienen que ir en orden.* -->
+   <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+    <script src="../../js/profesor/controlador_profesor_registrar.js"></script>
+    <script src="../../js/profesor/servicio_profesor_registrar.js"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+       crossorigin="anonymous">
+       <link rel="stylesheet" href="../../css/generales/reset.css">
+       <link rel="stylesheet" href="../../css/generales/generales.css">
+       <link rel="stylesheet" href="../../css/listas/tabla_general.css">
+  </head>
+  <body>
+    <div class="wrapper"> 
+      <!-- * * * * * * * * * * * en este div es en el que tienen que trabajar * * * * * * * * * * * * * * * -->
+      <!-- <h3>Listar Tiquetes</h3> -->
+      <!-- <input type="text" id="tblTiquetes" onkeyup="myFunction()" placeholder="Busqueda"> -->
+
+      <form action="">
+          <div class=" field filtro">
+              <input type="text" name="txtFiltroTiquetes" id="txtFiltroTiquetes" placeholder="Busqueda">
+              <label for="txtFiltroTiquetes"><i class="fas fa-search"></i>  Buscar</label>
+          </div>
+        </form>
+
+        <a href="registrotiquetecliente.html" class="buttonDash"> Registar Tiquete
+            <i class="fas fa-ticket-alt"></i>
+          </a>
+
+      <table id="tblTiquetes">
+        <thead>
+          <th>Nombre de la Empresa</th>
+          <th>Nombre de contacto</th>
+          <th>Apellido de contacto</th>
+          <th>Correo de contacto</th>
+          </thead>
+          <tbody>
+
+          </tbody>
+      </table>
+
+    </div>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.5/sweetalert2.all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
+
+    
+    <script src="../../js/jquery-3.3.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+    <script src="../../js/tiquete/controlador_tiquete_registrar.js"></script>
+    <script src="../../js/tiquete/servicio_tiquete_registrar.js"></script>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+            <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+             crossorigin="anonymous">
+            <link href='img/CSHLogo.png' rel='shortcut icon' type='image/png'>
+            <link rel="stylesheet" href="../../css/generales/reset.css">
+            <link rel="stylesheet" href="../../css/generales/generales.css">
+            <link rel="stylesheet" href="../../css/formularios/formularios_general.css">
+  </head>
+  <body>
+    <div class="wrapper"> 
+            <!-- * * * * * * * * * * * en este div es en el que tienen que trabajar * * * * * * * * * * * * * * * -->
+            <!-- <div><h1>Tiquetes</h1></div> -->
+
+            <form action="">
+                    <div class="field">
+                      <input type="text" name="txtCodigoTiquete" id="txtCodigoTiquete" placeholder="Código Proyecto">
+                      <label for="txtCodigoTiquete">Código Proyecto</label>
+                    </div>
+                    <div class="field">
+                      <input type="text" name="txtNombreEmpresa" id="txtNombreEmpresa" placeholder="Nombre de la Empresa">
+                      <label for="txtNombreEmpresa">Nombre de la Empresa</label>
+                    </div>
+                    <div class="field">
+
+                <input type="number" placeholder="Cedula Juridica" id="txtCedula">
+                      <input type="text" name="txtDireccion" id="txtDireccion" placeholder="Dirección">
+                      <label for="txtDireccion">Dirección</label>
+                    </div>
+                    <div class="field">
+                      <input type="tel" name="txtTelefono" id="txtTelefono" placeholder="+506-8888-8888">
+                      <label for="txtTelefono">Teléfono</label>
+                    </div>
+                    <div class="field">
+                      <input type="email" name="txtEmail" id="txtEmail" placeholder="mcorralese@example.com">
+                      <label for="txtEmail">Correo electrónico</label>
+                    </div>
+                    <div class="field">
+                      <input type="number" name="txtCedula" id="txtCedula" placeholder="Cédula">
+                      <label for="txtCedula">Cédula</label>
+                    </div>
+                    <div class="field">
+                      <input type="text" name="txtCarrera" id="txtCarrera" placeholder="Carrera">
+                      <label for="txtCarrera">Carrera</label>
+                    </div>
+                    <div class="field">
+                      <input type="text" name="txtMateriasAprob" id="txtMateriasAprob" placeholder="Materias aprobadas">
+                      <label for="txtMateriasAprob">Materias aprobadas</label>
+                    </div>
+                    <div class="field">
+                      <input type="text" name="txtContactEmergNombre" id="txtContactEmergNombre" placeholder="Primer nombre contacto de Emergencia">
+                      <label for="txtContactEmergNombre">Primer nombre contacto de Emergencia</label>
+                    </div>
+                    <div class="field">
+                      <input type="text" name="txtContactEmergApellido" id="txtContactEmergApellido" placeholder="Primer nombre contacto de Emergencia">
+                      <label for="txtContactEmergApellido">Primer apellido contacto de Emergencia</label>
+                    </div>
+                    <div class="field">
+                      <input type="tel" name="txtContactEmergTelefono" id="txtContactEmergTelefono" placeholder="+506-8888-8888">
+                      <label for="txtContactEmergTelefono">Teléfono contacto de Emergencia</label>
+                    </div>
+                    <button type="button" id="btnRegEstud">Registrar</button>
+                  </form>
+
+            <form id="FormularioCliente">               
+                
+
+                <input type="text" placeholder="Descripcion Tiquete" id="txtDescripcion">
+                <input type="text" placeholder="Fecha de creacion"id="txtFecha">
+                <input type="text" placeholder="Estado del Tiquete" id="txtEstadoTiquete">
+                <input type="text" placeholder="Primer Nombre de contacto" id="txtPrimerNombre">
+                <input type="text" placeholder="Primer Apellido de contacto" id="txtPrimerApellido">
+                <input type="number" placeholder="Telefono de contacto" id="txtTelefono">
+                <input type="text" placeholder="Correo de contacto" id="txtCorreo">
+                <button type="button" id="btnTiquete">Crear Tiquete</button>
+            </form>
+
+
+            <!--<form id="FormularioCliente">               
+                <input type="text" placeholder="Nombre de la empresa" id="txtNombre">
+                <input type="number" placeholder="Cedula Juridica" id="txtCedula">
+                <input type="text" placeholder="Provincia" id="txtProvincia">
+                <input type="text" placeholder="Canton" id="txtCanton">
+                <input type="text" placeholder="Distrito"id="txtDistrito">
+                <input type="text" placeholder="Ubicacion" id="txtUbicacion">
+                <input type="text" placeholder="Primer Nombre de contacto" id="txtPrimerNombre">
+                <input type="text" placeholder="Primer Apellido de contacto" id="txtPrimerApellido">
+                <input type="number" placeholder="Telefono de contacto" id="txtTelefono">
+                <input type="text" placeholder="Correo de contacto" id="txtCorreo">
+                <button type="button" id="btnRegistrarCliente">Registrar</button>
+            </form>-->
+
+
+
+            
+           <!--<table id="tblCliente">
+                <thead>
+                    <th>Nombre de la Empresa</th>
+                    <th>Nombre de contacto</th>
+                    <th>Apellido de contacto</th>
+                    <th>Correo de contacto</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>-->
+    </div> 
+    
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.5/sweetalert2.js"></script>
+    <script src="js/servicioCliente.js"></script>
+    <script src="js/controladorCliente.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+    <script src="js/jquery-3.3.1.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script> integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
+
+
+    <script src="../../js/jquery-3.3.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+    <script src="js/servicio.js"></script>
+    <script src="js/controladorListar.js"></script>
+  </body>
+</html>
