@@ -12,13 +12,13 @@ let inputFiltro = document.querySelector('#txtFiltro');
 if (inputFiltro != undefined) {
     inputFiltro.addEventListener('keyup' , filtrarListaPokemon);
 }
+
 let inputCedula = document.querySelector('#txtCedula');
 let inputNombre = document.querySelector('#txtNombre');
 let inputTipo = document.querySelector('#txtTipo');
 // let inputDireccion = document.querySelector('#txtDireccion');
 // let inputTelefono = document.querySelector('#txtTelefono');
 // let inputEmail = document.querySelector('#txtEmail');
-
 // let inputCarrera = document.querySelector('#txtCarrera');
 // let inputMaterias = document.querySelector('#txtMateriasAprob');
 // let inputEmergNombre = document.querySelector('#txtContactEmergNombre');
@@ -32,11 +32,9 @@ function obtenerDatos(){
     let sCedula = Number(inputCedula.value); 
     let sNombre = inputNombre.value;    
     let sTipo = Number(inputTipo.value);
-    // let sApellido = inputApellido .value;
     // let sDireccion = inputDireccion.value; 
     // let sTelefono = Number(inputTelefono.value);
     // let sEmail = inputEmail.value;
-    // let sCedula = Number(inputCedula.value); 
     // let sCarrera = inputCarrera.value; 
     // let sMaterias = inputMaterias.value; 
     // let sEmergNombre = inputEmergNombre.value; 
@@ -123,8 +121,7 @@ function filtrarListaPokemon(){
     let listaFiltrada = [];
 
     for(let i = 0; i < listaPokemon.length; i++){
-        let nombreCompleto = listaPokemon[i].Nombre.toLowerCase();
-        // + " " + listaPokemon[i].Tipo.toLowerCase()
+        let nombreCompleto = listaPokemon[i].Nombre.toLowerCase(); // + " " + listaPokemon[i].Tipo.toLowerCase()       
 
         if(nombreCompleto.includes(filtro)){
             listaFiltrada.push(listaPokemon[i]);
