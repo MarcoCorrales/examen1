@@ -65,23 +65,23 @@ app.use( function(req, res, next) {
  * Exportams todas las rutas dentro del index.js
  */
 
-const proyecto = require('./components/proyecto/proyecto.route');
-const proyectoEstudiante = require('./components/proyecto/estudiantep.route');
-const cliente = require('./components/cliente/cliente.route');
-const estudiante = require('./components/estud/estud.route');
-const profesor = require('./components/profesor/profesor.route');
-const sistema = require('./components/sistema/sistema.route');
+//const proyecto = require('./components/proyecto/proyecto.route');
+//const proyectoEstudiante = require('./components/proyecto/estudiantep.route');
+//const cliente = require('./components/cliente/cliente.route');
+const pokemon = require('./components/pokemon/pokemon.route');
+// const profesor = require('./components/profesor/profesor.route');
+// const sistema = require('./components/sistema/sistema.route');
 
 /**
  * Le indicamos que le de acceso externo a las rutas inicializadas
  */
 
-app.use('/api', proyecto);
-app.use('/api', proyectoEstudiante);
-app.use('/api', cliente);
-app.use('/api', estudiante);
-app.use('/api', profesor);
-app.use('/api', sistema);
+// app.use('/api', proyecto);
+// app.use('/api', proyectoEstudiante);
+// app.use('/api', cliente);
+app.use('/api', pokemon);
+// app.use('/api', profesor);
+// app.use('/api', sistema);
 
 // Se guarda todo lo que se ha realizado
 module.exports = app;

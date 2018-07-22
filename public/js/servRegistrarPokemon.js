@@ -1,12 +1,12 @@
 'use strict';
-let listaEstud = [];
+let listaPokemon = [];
 
-function obtenerListaEstud (){
+function obtenerListaPokemon (){
     let lista = [];
 
     let respuesta = '';
     let peticion = $.ajax({
-        url : 'http://localhost:4000/api/mostrarEstud',
+        url : 'http://localhost:4000/api/mostrarPokemon',
         type : 'get',
         contentType : 'application/x-www-form-urlencoded; charset=utf-8',
         dataType : 'json',
@@ -30,28 +30,28 @@ function obtenerListaEstud (){
 }
 
 
-function registrarEstud(paInfoEstud){
-    console.log(paInfoEstud);
+function registrarPokemon(paInfoPokemon){
+    console.log(paInfoPokemon);
     let resultado = false;
     let contrasennaAutogenerada = ftnGeneradorContrasenna();
     let peticion = $.ajax({
-        url : 'http://localhost:4000/api/registrarEstud',
+        url : 'http://localhost:4000/api/registrarPokemon',
         type : 'post',
         contentType : 'application/x-www-form-urlencoded; charset=utf-8',
         dataType : 'json',
         async : false,
         data:{
-            Cedula : paInfoEstud[0],
-			Nombre : paInfoEstud[1],
-	        Tipo : paInfoEstud[2],
-	        // Direccion : paInfoEstud[2],
-	        // Telefono :  paInfoEstud[3],
-	        // Correo :  paInfoEstud[4], 
-	       	// Carrera : paInfoEstud[6],
-	        // Materias :  paInfoEstud[7],
-	        // NombreEmergencia :  paInfoEstud[8],
-	        // ApellidoEmergencia :  paInfoEstud[9],
-            // TelefonoEmergencia :  paInfoEstud[10],
+            Cedula : paInfoPokemon[0],
+			Nombre : paInfoPokemon[1],
+	        Tipo : paInfoPokemon[2],
+	        // Direccion : paInfoPokemon[2],
+	        // Telefono :  paInfoPokemon[3],
+	        // Correo :  paInfoPokemon[4], 
+	       	// Carrera : paInfoPokemon[6],
+	        // Materias :  paInfoPokemon[7],
+	        // NombreEmergencia :  paInfoPokemon[8],
+	        // ApellidoEmergencia :  paInfoPokemon[9],
+            // TelefonoEmergencia :  paInfoPokemon[10],
             // Contrasenna: contrasennaAutogenerada,
     
         }

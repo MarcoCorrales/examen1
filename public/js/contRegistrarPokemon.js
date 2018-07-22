@@ -1,16 +1,16 @@
 'use strict';
-let botonRegEstud = document.querySelector('#btnRegEstud');
+let botonRegPokemon = document.querySelector('#btnRegPokemon');
 
 
-if (botonRegEstud != undefined) {
-    botonRegEstud.addEventListener('click' , obtenerDatos);
+if (botonRegPokemon != undefined) {
+    botonRegPokemon.addEventListener('click' , obtenerDatos);
 }
 
 let inputFiltro = document.querySelector('#txtFiltro');
 
 
 if (inputFiltro != undefined) {
-    inputFiltro.addEventListener('keyup' , filtrarListaEstud);
+    inputFiltro.addEventListener('keyup' , filtrarListaPokemon);
 }
 let inputCedula = document.querySelector('#txtCedula');
 let inputNombre = document.querySelector('#txtNombre');
@@ -26,7 +26,7 @@ let inputTipo = document.querySelector('#txtTipo');
 // let inputEmergTelefono = document.querySelector('#txtContactEmergTelefono');
 
 function obtenerDatos(){
-    let infoEstud =[];
+    let infoPokemon =[];
     let bError = false;
 
     let sCedula = Number(inputCedula.value); 
@@ -43,7 +43,7 @@ function obtenerDatos(){
     // let sEmergApellido = inputEmergApellido.value; 
     // let sEmergTelefono = Number(inputEmergTelefono.value); 
 
-    infoEstud.push(sNombre, sCedula, sTipo);
+    infoPokemon.push(sNombre, sCedula, sTipo);
     
     bError = validar();
     if(bError == true){
@@ -55,7 +55,7 @@ function obtenerDatos(){
         });
         console.log('No se pudo registrar el usuario');
     }else{
-        let resultado = registrarEstud(infoEstud);
+        let resultado = registrarPokemon(infoPokemon);
        if (resultado == true){
         swal({
             type : 'success',
@@ -65,25 +65,25 @@ function obtenerDatos(){
         })
         .then(
             function(){
-                window.location.href = "../../html/estudiante/indexTablaEstud.html"
+                window.location.href = "../html/tablaPokemon.html"
             }
         );
 
        }
        
-        //imprimirListaEstud();
+        //imprimirListaPokemon();
         limpiarFormulario();
     }
     
 };
 
-function imprimirListaEstud(){
-    let listaEstud = obtenerListaEstud();
+function imprimirListaPokemon(){
+    let listaPokemon = obtenerListaPokemon();
 
-    let tbody = document.querySelector('#tblEstud tbody');
+    let tbody = document.querySelector('#tblPokemon tbody');
     tbody.innerHTML = '';
 
-    for(let i = 0; i < listaEstud.length; i++){
+    for(let i = 0; i < listaPokemon.length; i++){
         let fila = tbody.insertRow();
 
         let cCedula = fila.insertCell();
@@ -99,38 +99,38 @@ function imprimirListaEstud(){
         //let cEmergApellido = fila.insertCell(); 
         //let cEmergTelefono = fila.insertCell(); 
 
-        cCedula.innerHTML = listaEstud[i].Cedula;
-        cNombre.innerHTML = listaEstud[i].Nombre;
-        cTipo.innerHTML = listaEstud[i].Tipo;
-        //cDireccion.innerHTML = listaEstud[i].Direccion;
-        // cTelefono.innerHTML = listaEstud[i].Telefono;
-        // cEmail.innerHTML = listaEstud[i].Correo;
+        cCedula.innerHTML = listaPokemon[i].Cedula;
+        cNombre.innerHTML = listaPokemon[i].Nombre;
+        cTipo.innerHTML = listaPokemon[i].Tipo;
+        //cDireccion.innerHTML = listaPokemon[i].Direccion;
+        // cTelefono.innerHTML = listaPokemon[i].Telefono;
+        // cEmail.innerHTML = listaPokemon[i].Correo;
        
-        //cCarrera.innerHTML = listaEstud[i].Carrera;
-        //cMaterias.innerHTML = listaEstud[i].Materias;
-        //cEmergNombre.innerHTML = listaEstud[i].NombreEmergencia;
-        //cEmergApellido.innerHTML = listaEstud[i].ApellidoEmergencia;
-        //cEmergTelefono.innerHTML = listaEstud[i].TelefonoEmergencia;
+        //cCarrera.innerHTML = listaPokemon[i].Carrera;
+        //cMaterias.innerHTML = listaPokemon[i].Materias;
+        //cEmergNombre.innerHTML = listaPokemon[i].NombreEmergencia;
+        //cEmergApellido.innerHTML = listaPokemon[i].ApellidoEmergencia;
+        //cEmergTelefono.innerHTML = listaPokemon[i].TelefonoEmergencia;
     }
 
 };
 
-function filtrarListaEstud(){
+function filtrarListaPokemon(){
     let filtro = $("#txtFiltro").val();
-    let listaEstud = obtenerListaEstud();
+    let listaPokemon = obtenerListaPokemon();
     filtro = filtro.toLowerCase();
 
     let listaFiltrada = [];
 
-    for(let i = 0; i < listaEstud.length; i++){
-        let nombreCompleto = listaEstud[i].Nombre.toLowerCase() + " " + listaEstud[i].Tipo.toLowerCase();
+    for(let i = 0; i < listaPokemon.length; i++){
+        let nombreCompleto = listaPokemon[i].Nombre.toLowerCase() + " " + listaPokemon[i].Tipo.toLowerCase();
 
         if(nombreCompleto.includes(filtro)){
-            listaFiltrada.push(listaEstud[i]);
+            listaFiltrada.push(listaPokemon[i]);
         }
     }
 
-    let tbody = document.querySelector('#tblEstud tbody');
+    let tbody = document.querySelector('#tblPokemon tbody');
     tbody.innerHTML = '';
 
     for(let i = 0; i < listaFiltrada.length; i++){
@@ -216,5 +216,5 @@ function limpiarFormulario(){
     }     
     
 
-    imprimirListaEstud();
-    //filtrarListaEstud('Prueba', 'lkflkashshfj')
+    imprimirListaPokemon();
+    //filtrarListaPokemon('Prueba', 'lkflkashshfj')
