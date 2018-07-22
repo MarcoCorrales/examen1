@@ -213,6 +213,8 @@ function limpiarFormulario(){
             // inputEmergTelefono.value = '';   
     }     
     
-
+ $(document).ready(function() {
     imprimirListaPokemon();
-    //filtrarListaPokemon('Prueba', 'lkflkashshfj')
+ });
+
+   //filtrarListaPokemon('Prueba', 'lkflkashshfj')
