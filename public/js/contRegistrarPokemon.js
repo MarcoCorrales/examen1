@@ -43,7 +43,7 @@ function obtenerDatos(){
     // let sEmergApellido = inputEmergApellido.value; 
     // let sEmergTelefono = Number(inputEmergTelefono.value); 
 
-    infoPokemon.push(sNombre, sCedula, sTipo);
+    infoPokemon.push(sCedula, sNombre, sTipo);
     
     bError = validar();
     if(bError == true){
@@ -77,43 +77,43 @@ function obtenerDatos(){
     
 };
 
-// function imprimirListaPokemon(){
-//     let listaPokemon = obtenerListaPokemon();
+function imprimirListaPokemon(){
+    let listaPokemon = obtenerListaPokemon();
 
-//     let tbody = document.querySelector('#tblPokemon tbody');
-//     tbody.innerHTML = '';
+    let tbody = document.querySelector('#tblPokemon tbody');
+    tbody.innerHTML = '';
 
-//     for(let i = 0; i < listaPokemon.length; i++){
-//         let fila = tbody.insertRow();
+    for(let i = 0; i < listaPokemon.length; i++){
+        let fila = tbody.insertRow();
 
-//         let cCedula = fila.insertCell();
-//         let cNombre = fila.insertCell();
-//         let cTipo = fila.insertCell();
-//         //let cDireccion = fila.insertCell();
-//         // let cTelefono = fila.insertCell();
-//         // let cEmail = fila.insertCell();
+        let cCedula = fila.insertCell();
+        let cNombre = fila.insertCell();
+        let cTipo = fila.insertCell();
+        //let cDireccion = fila.insertCell();
+        // let cTelefono = fila.insertCell();
+        // let cEmail = fila.insertCell();
         
-//        // /let cCarrera = fila.insertCell();
-//         //let cMaterias = fila.insertCell(); 
-//        // let cEmergNombre = fila.insertCell(); 
-//         //let cEmergApellido = fila.insertCell(); 
-//         //let cEmergTelefono = fila.insertCell(); 
+       // /let cCarrera = fila.insertCell();
+        //let cMaterias = fila.insertCell(); 
+       // let cEmergNombre = fila.insertCell(); 
+        //let cEmergApellido = fila.insertCell(); 
+        //let cEmergTelefono = fila.insertCell(); 
 
-//         cCedula.innerHTML = listaPokemon[i].Cedula;
-//         cNombre.innerHTML = listaPokemon[i].Nombre;
-//         cTipo.innerHTML = listaPokemon[i].Tipo;
-//         //cDireccion.innerHTML = listaPokemon[i].Direccion;
-//         // cTelefono.innerHTML = listaPokemon[i].Telefono;
-//         // cEmail.innerHTML = listaPokemon[i].Correo;
+        cCedula.innerHTML = listaPokemon[i].Cedula;
+        cNombre.innerHTML = listaPokemon[i].Nombre;
+        cTipo.innerHTML = listaPokemon[i].Tipo;
+        //cDireccion.innerHTML = listaPokemon[i].Direccion;
+        // cTelefono.innerHTML = listaPokemon[i].Telefono;
+        // cEmail.innerHTML = listaPokemon[i].Correo;
        
-//         //cCarrera.innerHTML = listaPokemon[i].Carrera;
-//         //cMaterias.innerHTML = listaPokemon[i].Materias;
-//         //cEmergNombre.innerHTML = listaPokemon[i].NombreEmergencia;
-//         //cEmergApellido.innerHTML = listaPokemon[i].ApellidoEmergencia;
-//         //cEmergTelefono.innerHTML = listaPokemon[i].TelefonoEmergencia;
-//     }
+        //cCarrera.innerHTML = listaPokemon[i].Carrera;
+        //cMaterias.innerHTML = listaPokemon[i].Materias;
+        //cEmergNombre.innerHTML = listaPokemon[i].NombreEmergencia;
+        //cEmergApellido.innerHTML = listaPokemon[i].ApellidoEmergencia;
+        //cEmergTelefono.innerHTML = listaPokemon[i].TelefonoEmergencia;
+    }
 
-// };
+};
 
 function filtrarListaPokemon(){
     let filtro = $("#txtFiltro").val();
@@ -217,5 +217,5 @@ function limpiarFormulario(){
     }     
     
 
-    //imprimirListaPokemon();
+    imprimirListaPokemon();
     //filtrarListaPokemon('Prueba', 'lkflkashshfj')
