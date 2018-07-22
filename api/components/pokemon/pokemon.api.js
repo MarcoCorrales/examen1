@@ -33,8 +33,8 @@ module.exports.registrar = function(req, res){
 module.exports.mostrar = function(req, res){ 
 
     pokemonModel.find().then(
-        function(pokemoniantes){
-            res.send(pokemoniantes);
+        function(pokemon){
+            res.send(pokemon);
     });        
 
 };
@@ -42,7 +42,7 @@ module.exports.mostrar = function(req, res){
 /*
 module.exports.mostrar = function(req, res){ 
 
-    pokemonModel.find({}, function(error, pokemoniantes){
+    pokemonModel.find({}, function(error, pokemon){
         let arraypokemon = [];
 
         pokemoniantes.forEach(function(pokemon){
@@ -52,7 +52,7 @@ module.exports.mostrar = function(req, res){
         if(error){
             res.json({success : false, msg : 'Ha ocurrido un error' + error});
         }else{
-            res.json({success: true, pokemoniantes: arraypokemon });
+            res.json({success: true, pokemon: arraypokemon });
         }
     });
 

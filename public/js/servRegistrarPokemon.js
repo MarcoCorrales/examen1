@@ -33,7 +33,7 @@ function obtenerListaPokemon (){
 function registrarPokemon(paInfoPokemon){
     console.log(paInfoPokemon);
     let resultado = false;
-    let contrasennaAutogenerada = ftnGeneradorContrasenna();
+    // let contrasennaAutogenerada = ftnGeneradorContrasenna();
     let peticion = $.ajax({
         url : 'http://localhost:4000/api/registrarPokemon',
         type : 'post',
@@ -78,14 +78,14 @@ function registrarPokemon(paInfoPokemon){
       return resultado;
 }
 
-function ftnGeneradorContrasenna() {
+// function ftnGeneradorContrasenna() {
 
-    let length = 5,
-        charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
-        retVal = "";
-    for (let i = 0, n = charset.length; i < length; ++i) {
-        retVal += charset.charAt(Math.floor(Math.random() * n));
-    }
-    return retVal;
-}
+//     let length = 5,
+//         charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+//         retVal = "";
+//     for (let i = 0, n = charset.length; i < length; ++i) {
+//         retVal += charset.charAt(Math.floor(Math.random() * n));
+//     }
+//     return retVal;
+// }
 
