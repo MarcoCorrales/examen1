@@ -58,12 +58,12 @@ function obtenerDatos(){
         swal({
             type : 'success',
             title : 'Registro exitoso',
-            text: 'El usuario se registró adecuadamente',
+            text: 'El Pokémon se registró adecuadamente',
             confirmButtonText : 'Entendido'
         })
         .then(
             function(){
-                window.location.href = "../html/tablaPokemon.html"
+                window.location.href = "../html/registrarPokemon.html"
             }
         );
 
