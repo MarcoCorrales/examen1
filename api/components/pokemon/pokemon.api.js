@@ -7,17 +7,7 @@ module.exports.registrar = function(req, res){
         Cedula : req.body.Cedula,
         Nombre : req.body.Nombre,
         Tipo : req.body.Tipo,
-        // Direccion : req.body.Direccion,
-        // Telefono :  req.body.Telefono,
-        // Correo :  req.body.Correo,
-        
-        // Carrera : req.body.Carrera,
-        // Materias :  req.body.Materias,
-        // NombreEmergencia : req.body.NombreEmergencia,
-        // ApellidoEmergencia : req.body.ApellidoEmergencia,
-        // TelefonoEmergencia : req.body.TelefonoEmergencia,
-        // Contrasenna : req.body.Contrasenna,
-        // TipoUsuario: 3
+        foto : req.body.foto
     });
 
     nuevoPokemon.save(function(error){
