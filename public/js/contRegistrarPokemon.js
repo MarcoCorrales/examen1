@@ -16,6 +16,7 @@ if (inputFiltro != undefined) {
 let inputCedula = document.querySelector('#txtCedula');
 let inputNombre = document.querySelector('#txtNombre');
 let inputTipo = document.querySelector('#txtTipo');
+let inputFoto = document.querySelector('#inputFoto');
 
 function obtenerDatos(){
     let infoPokemon =[];

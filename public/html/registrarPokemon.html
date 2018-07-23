@@ -22,9 +22,12 @@
               <i class="fas fa-search"></i> Buscar</label>
           </div>
         </form>
-        <img src="" alt="Foto" id="txtImagen">
+        <!-- <img src="" alt="Foto" id="txtImagen"> -->
 
-        <button type="button" id="btnSeleccionarImagen">Subir foto</button>
+        <button type="button" class="subirFoto" id="btnSeleccionarImagen"> Subir foto </button>
+        <input type="hidden" id="inputFoto" value="">
+
+        <!-- <button type="button" id="btnSeleccionarImagen">Subir foto</button> -->
         <div class="field">
           <input type="number" name="txtCedula" id="txtCedula" placeholder="Número de la pokédex">
           <label for="txtCedula">Número de la pokédex</label>
@@ -37,10 +40,10 @@
           <input type="number" name="txtTipo" id="txtTipo" placeholder="Seleccione el tipo de pokémon">
           <label for="txtTipo">Tipo de pokémon</label>
         </div>
-        <a href="../html/index.html" class="buttonDash">
+        <a href="../html/index.html" class="buttonDash undo">
           <i class="fas fa-undo"></i>
         </a>
-        <button type="button" id="btnRegPokemon">Registrar</button>
+        <button type="button" id="btnRegPokemon" class="registrar">Registrar</button>
       </form>
       <table id="tblPokemon" class="">
         <thead>
