@@ -122,7 +122,7 @@ ul{
 }
 .search input{
     width: 83%;
-    padding:4%;
+    padding: 6%;
     font-size: 0.9em;
     color: #999;
     outline: none;
@@ -132,6 +132,8 @@ ul{
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
+    top: -1px;
+    left: 2px;
 }
 .search i.fa.fa-search {
     font-size: 0.9em;
@@ -190,7 +192,7 @@ i.fa.fa-phone {
     top: 338px;
     left: 286px;
 }
-#tblPokemon{
+#tblPokemon, #tblEntrenador {
     padding-top: 5%;
     position: relative;
     left: 25%;
