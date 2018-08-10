@@ -85,7 +85,17 @@ function imprimirListaPokemon(){
         cCedula.innerHTML = listaPokemon[i].Cedula;
         cNombre.innerHTML = listaPokemon[i].Nombre;
         cTipo.innerHTML = listaPokemon[i].Tipo;
-        cFoto.innerHTML = '<img src="'+listaPokemon[i]['Foto']+ '">';
+        
+
+
+        let foto = document.createElement('img');
+        let fotoUrl = '';
+        if(listaPokemon[i].foto){
+            fotoUrl = (listaPokemon[i].foto).replace('file', 'http'); 
+        }
+        foto.src = fotoUrl;
+
+        cFoto.appendChild(foto);
 
     }
 
@@ -127,8 +137,17 @@ function filtrarListaPokemon(){
         cCedula.innerHTML = listaFiltrada[i].Cedula;
         cNombre.innerHTML = listaFiltrada[i].Nombre;
         cTipo.innerHTML = listaFiltrada[i].Tipo;
-        cFoto.innerHTML = listaFiltrada[i].Foto;
-        cFoto.innerHTML = '<img src="'+listaPokemones[i]['Foto']+ '">';
+
+        
+        let foto = document.createElement('img');
+        let fotoUrl = '';
+        if(listaFiltrada[i].foto){
+            fotoUrl = (listaFiltrada[i].foto).replace('file', 'http'); 
+        }
+        foto.src = fotoUrl;
+
+        cFoto.appendChild(foto);
+        
 
     }
 

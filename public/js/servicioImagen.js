@@ -20,7 +20,7 @@ $(function() {
             imagenUrl = 'https://res.cloudinary.com/marcocorrales/image/upload/' + id;
             imagenUrl = processImage(id);
             console.log(imagenUrl);
-            document.querySelector('#txtImagen').src = imagenUrl;
+            // document.querySelector('#txtImagen').src = imagenUrl;
             return imagenUrl;
         });
     });
